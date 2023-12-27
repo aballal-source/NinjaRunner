@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    background-image: url('./Images/night.gif');
+    overflow: hidden;
+}
+
+#character{
+    width: 30px;
+    height: 50px;
+    position: relative;
+    top:150px;
+    background-image: url('./Images/NarutoSprite/naruto.png');
+    overflow: hidden;
+}
+.animate{
+    animation: tp 500ms;
+}
+
+#block{
+    width: 30px;
+    height: 20px;
+    background-image: url('./Images/shuriken.gif');
+    overflow: hidden;
+    position: relative;
+    top:130px;
+    left:480px;
+    animation: block 1s infinite linear;
+}
+
+#score{
+    top:300px;
+}
+/*moving the block to the left of the screen*/
+@keyframes block{
+    0%{left:480px;}
+    100%{left:-20px;}
+}
+
+/*the keyframes for dodging the object*/
+@keyframes tp{
+    0%{top:150px;}
+    30%{left:110px;
+    background-image: url('./Images/slice.gif');}
+    70%{left:110px;}
+    100%{top:150px;}
+}
